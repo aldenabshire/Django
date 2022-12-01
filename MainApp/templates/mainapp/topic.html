@@ -10,8 +10,11 @@
     -- {{ e.date_added }}
 
     {% empty %}
-    <li>No entries for this topi have been added yet.</li>
+    <li>No entries for this topic have been added yet.</li>
     {% endfor %}
 </ul>
+
+<a href="{% url 'MainApp:new_entry' topic.id %}">Add a new entry</a>
+
 
 {% endblock content %}
